@@ -1,0 +1,350 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   Bali Brown Gold Design System
+========================================= */
+
+@layer base {
+
+  :root {
+
+    /* Base */
+    --background: 32 25% 94%;
+    --foreground: 25 25% 18%;
+
+    --card: 32 20% 97%;
+    --card-foreground: 25 25% 18%;
+
+    --popover: 32 20% 97%;
+    --popover-foreground: 25 25% 18%;
+
+    /* Primary Brown */
+    --primary: 28 38% 32%;
+    --primary-foreground: 36 45% 96%;
+    --primary-glow: 30 35% 45%;
+
+    /* Gold */
+    --secondary: 40 55% 65%;
+    --secondary-foreground: 25 25% 18%;
+
+    /* Neutral */
+    --muted: 30 18% 88%;
+    --muted-foreground: 25 12% 40%;
+
+    --accent: 35 45% 52%;
+    --accent-foreground: 36 45% 96%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 36 45% 96%;
+
+    --border: 30 15% 80%;
+    --input: 30 15% 85%;
+    --ring: 28 38% 32%;
+
+    --radius: 0.75rem;
+
+    /* Bali Theme */
+    --sage-rich: 30 28% 45%;
+    --sage-deep: 28 32% 32%;
+
+    --gold: 40 60% 68%;
+    --gold-deep: 36 55% 52%;
+
+    --cream: 35 35% 94%;
+    --ink: 25 20% 15%;
+
+    /* Gradients */
+    --gradient-hero:
+      linear-gradient(
+        135deg,
+        hsl(28 32% 28%) 0%,
+        hsl(30 28% 38%) 45%,
+        hsl(40 40% 52%) 100%
+      );
+
+    --gradient-sage:
+      linear-gradient(
+        180deg,
+        hsl(30 28% 45%),
+        hsl(28 32% 30%)
+      );
+
+    --gradient-gold:
+      linear-gradient(
+        135deg,
+        hsl(40 65% 72%),
+        hsl(36 58% 56%)
+      );
+
+    --gradient-card:
+      linear-gradient(
+        180deg,
+        hsl(35 25% 98%),
+        hsl(32 20% 92%)
+      );
+
+    /* Shadows */
+    --shadow-elegant:
+      0 10px 40px -10px hsl(28 35% 25% / 0.35);
+
+    --shadow-card:
+      0 4px 20px -8px hsl(25 25% 15% / 0.15);
+
+    --shadow-glow:
+      0 0 50px hsl(40 65% 65% / 0.35);
+
+    --transition-smooth:
+      all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Tenun */
+    --tenun-1: 30 28% 45%;
+    --tenun-2: 40 60% 68%;
+    --tenun-3: 35 35% 94%;
+
+    /* Sidebar */
+    --sidebar-background: 35 22% 96%;
+    --sidebar-foreground: 25 25% 18%;
+
+    --sidebar-primary: 28 38% 32%;
+    --sidebar-primary-foreground: 36 45% 96%;
+
+    --sidebar-accent: 30 18% 88%;
+    --sidebar-accent-foreground: 25 25% 18%;
+
+    --sidebar-border: 30 15% 80%;
+    --sidebar-ring: 28 38% 32%;
+  }
+
+  /* =========================================
+     Dark Mode
+  ========================================= */
+
+  .dark {
+
+    --background: 25 12% 10%;
+    --foreground: 35 25% 92%;
+
+    --card: 25 12% 14%;
+    --card-foreground: 35 25% 92%;
+
+    --popover: 25 12% 14%;
+    --popover-foreground: 35 25% 92%;
+
+    --primary: 30 35% 60%;
+    --primary-foreground: 25 12% 10%;
+
+    --secondary: 40 55% 65%;
+    --secondary-foreground: 25 12% 10%;
+
+    --muted: 25 10% 20%;
+    --muted-foreground: 35 10% 72%;
+
+    --accent: 35 40% 58%;
+    --accent-foreground: 35 25% 95%;
+
+    --border: 25 8% 24%;
+    --input: 25 8% 24%;
+    --ring: 30 35% 60%;
+  }
+}
+
+/* =========================================
+   Base
+========================================= */
+
+@layer base {
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    @apply tracking-tight;
+  }
+}
+
+/* =========================================
+   Components
+========================================= */
+
+@layer components {
+
+  .pattern-tenun {
+
+    background-color: hsl(var(--sage-deep));
+
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        hsl(var(--gold) / 0.15) 0 1px,
+        transparent 1px 8px
+      ),
+
+      repeating-linear-gradient(
+        90deg,
+        hsl(var(--gold) / 0.15) 0 1px,
+        transparent 1px 8px
+      ),
+
+      repeating-linear-gradient(
+        45deg,
+        hsl(var(--cream) / 0.05) 0 2px,
+        transparent 2px 14px
+      );
+  }
+
+  .pattern-endek {
+
+    background-color: hsl(var(--sage-rich));
+
+    background-image:
+      radial-gradient(
+        circle at 20% 30%,
+        hsl(var(--gold) / 0.25) 0 4px,
+        transparent 5px
+      ),
+
+      radial-gradient(
+        circle at 70% 60%,
+        hsl(var(--cream) / 0.18) 0 3px,
+        transparent 4px
+      ),
+
+      repeating-linear-gradient(
+        45deg,
+        hsl(var(--gold) / 0.1) 0 2px,
+        transparent 2px 16px
+      ),
+
+      repeating-linear-gradient(
+        -45deg,
+        hsl(var(--cream) / 0.08) 0 2px,
+        transparent 2px 16px
+      );
+
+    background-size: 60px 60px, 80px 80px, auto, auto;
+  }
+
+  .pattern-flora {
+    background-color: hsl(30 28% 42%);
+  }
+
+  .pattern-fauna {
+    background-color: hsl(28 32% 35%);
+  }
+
+  .pattern-geometris {
+    background-color: hsl(var(--sage-deep));
+  }
+
+  .pattern-dekoratif {
+    background-color: hsl(30 25% 40%);
+  }
+
+  .ornament-divider {
+
+    background-image:
+      radial-gradient(
+        circle,
+        hsl(var(--gold)) 0 3px,
+        transparent 4px
+      );
+
+    background-size: 16px 16px;
+    background-repeat: repeat-x;
+    background-position: center;
+  }
+}
+
+/* =========================================
+   Utilities
+========================================= */
+
+@layer utilities {
+
+  .text-gradient-gold {
+
+    background: var(--gradient-gold);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+  }
+
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .bg-gradient-sage {
+    background: var(--gradient-sage);
+  }
+
+  .bg-gradient-gold {
+    background: var(--gradient-gold);
+  }
+
+  .bg-gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .shadow-card-soft {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-glow-gold {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
+
+/* =========================================
+   Animation
+========================================= */
+
+@keyframes fade-up {
+
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+
+  0%, 100% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out both;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s ease-in-out infinite;
+}
