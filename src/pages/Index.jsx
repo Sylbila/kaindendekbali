@@ -46,7 +46,7 @@ const Index = () => {
       <footer className="bg-gradient-maroon py-10 text-center relative overflow-hidden">
         <div className="absolute inset-0 pattern-endek opacity-10" /> 
         <div className="container relative">
-          <p className="text-secondary font-bold text-lg mb-2">Konservasi Kain Endek Bali</p>
+          <p className="text-secondary font-bold text-lg mb-2">Media Pembelajaran Kain Endek Bali</p>
           <p className="text-primary-foreground/70 text-sm">
             Melestarikan warisan budaya Bali melalui teknologi Generative AI.
           </p>
