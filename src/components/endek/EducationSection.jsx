@@ -79,12 +79,12 @@ export const EducationSection = () => {
           {items.map(({ icon: Icon, title, text, image }) => (
             <article
               key={title}
-              className="bg-white rounded-3xl p-6 border shadow-sm"
+              className="bg-white rounded-3xl p-8 border shadow-sm"
             >
               <div className="flex gap-5 flex-col md:flex-row">
                 
                 {/* CONTENT */}
-                <div className="flex-1 items-center">
+                <div className="flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="bg-[#f8f4ee] p-3 rounded-xl">
                       <Icon className="w-6 h-6 text-[#c79b5d]" />
@@ -101,11 +101,11 @@ export const EducationSection = () => {
                 </div>
         
                 {/* IMAGE */}
-                <div className="flex-1 items-center">
+                <div className="flex-1">
                   <img
                     src={image}
                     alt={title}
-                    className="w-full h-[230px] object-cover rounded-2xl"
+                    className="w-full h-full min-h-[230px] object-cover rounded-2xl"
                   />
                 </div>
         
