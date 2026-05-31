@@ -81,10 +81,10 @@ export const EducationSection = () => {
               key={title}
               className="bg-white rounded-3xl p-6 border shadow-sm"
             >
-              <div className="flex flex-row gap-5 items-center">
+              <div className="flex gap-5 flex-col md:flex-row">
                 
                 {/* CONTENT */}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 items-center">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="bg-[#f8f4ee] p-3 rounded-xl">
                       <Icon className="w-6 h-6 text-[#c79b5d]" />
@@ -101,7 +101,7 @@ export const EducationSection = () => {
                 </div>
         
                 {/* IMAGE */}
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 items-center">
                   <img
                     src={image}
                     alt={title}
