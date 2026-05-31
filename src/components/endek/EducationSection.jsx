@@ -82,27 +82,33 @@ export const EducationSection = () => {
               className="bg-white rounded-3xl p-6 border shadow-sm"
             >
               <div className="flex gap-5 items-center">
+                
+                {/* CONTENT */}
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="bg-[#f8f4ee] p-3 rounded-xl">
                       <Icon className="w-6 h-6 text-[#c79b5d]" />
                     </div>
-
+        
                     <h3 className="text-3xl font-bold text-[#6a4325]">
                       {title}
                     </h3>
                   </div>
-
+        
                   <p className="text-lg leading-relaxed text-gray-700">
                     {text}
                   </p>
                 </div>
-
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-[230px] h-[230px] object-cover rounded-2xl"
-                />
+        
+                {/* IMAGE */}
+                <div className="flex-1">
+                  <img
+                    src={image}
+                    alt={title}
+                    className="w-full h-[230px] object-cover rounded-2xl"
+                  />
+                </div>
+        
               </div>
             </article>
           ))}
