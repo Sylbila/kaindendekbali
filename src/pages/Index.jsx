@@ -53,7 +53,7 @@ const Index = () => {
         <div className="absolute inset-0 pattern-endek opacity-10" />
         <div className="container relative">
           <p className="text-secondary font-bold text-lg mb-2">
-            Konservasi Kain Endek Bali
+            Media Pengenalan Kain Endek Bali
           </p>
           <p className="text-[#6B4F3A] text-sm">
             Melestarikan warisan budaya Bali melalui teknologi Generative AI.
